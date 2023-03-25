@@ -1,0 +1,46 @@
+﻿@model List<CourseShare.Domain.DomainModels.Course>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <a class="btn btn-success" asp-action="Create">Insert New Course</a>
+    </div>
+    
+       @for (int i = 0; i < Model.Count; i++)
+       {
+           var item = Model[i];
+
+           if(i % 3 == 0)
+           {
+               @:<div class="row">
+           }
+
+        <div class="col-md-3 m-4">
+            <div class="card" style="width: 18rem; height: 30rem;">
+
+                <div class="card-body">
+                    <h3 class="card-title">@item.CourseName</h3>
+                    <p class="card-text">@item.CourseDescription</p>
+                </div>
+
+                <div class="card-footer">
+                    <a asp-controller="Courses" asp-action="AddCourseToMyCourses" asp-route-id="@item.Id" class="btn btn-info">Add to My Courses</a>
+                    <a asp-controller="Courses" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a>
+                </div>
+            </div>
+        </div>
+
+
+           if(i % 3 == 2)
+           {
+               @:</div>
+           }
+       }
+</div>
