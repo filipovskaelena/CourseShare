@@ -2,7 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@*<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+<style>
+    body {
+        min-height: 100%;
+    }
+</style>
+<body class="min-vh-100 min-vw-100">
+    <div class="w-100 vh-100">
+    <section id="hero" class="w-100 h-100">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner vh-100" role="listbox">
+
+            <!-- Slide 1 -->
+                    <div class="carousel-item active vh-100" style="background-image: url(https://www.lecole.edu.pk/wp-content/uploads/2021/01/Education-Pic.jpg)">
+                        <div class="carousel-container vh-100 carousel-caption">
+                            <div class="container vh-100 ">
+                                
+                        <h2 class="animate__animated animate__fadeInDown">Добредојдовте на <span>CourseShare</span></h2>
+                        <p class="animate__animated animate__fadeInUp"> Пребарајте низ достапните курсеви или додадете свој</p>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-image: url(https://institute.careerguide.com/wp-content/uploads/2020/09/study1-1024x666.jpeg)">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Споделете курс со останатите</h2>
+                        <p class="animate__animated animate__fadeInUp">Достапност на ресурси за учење е нашата главна цел</p>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url(https://www.todaytechnology.org/wp-content/uploads/2021/01/How-to-Choose-a-Laptop-for-Studying.jpg)">
+                <div class="carousel-container">
+                    <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Пребарајте низ бројните курсеви кои се веќе достапни</h2>
+                        <p class="animate__animated animate__fadeInUp"> Прелистајте ги курсевите кои ги споделиле останатите корисници</p>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- End Hero -->
 </div>
+
+
+</body>
