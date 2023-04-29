@@ -5,33 +5,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+<h1>Избриши курс од листата</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+
 <div>
-    <h4>Course</h4>
+    
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CourseName)
+        <dt class="col-sm-2">Име
+            @*@Html.DisplayNameFor(model => model.CourseName)*@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CourseName)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CourseLink)
+        <dt class="col-sm-2">Линк
+            @*@Html.DisplayNameFor(model => model.CourseLink)*@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CourseLink)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CourseLanguage)
+        <dt class="col-sm-2">Јазик
+            @*@Html.DisplayNameFor(model => model.CourseLanguage)*@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CourseLanguage)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CourseRating)
+        <dt class="col-sm-2">Оцена
+            @*@Html.DisplayNameFor(model => model.CourseRating)*@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.CourseRating)
@@ -41,6 +41,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Назад кон листата</a>
     </form>
 </div>

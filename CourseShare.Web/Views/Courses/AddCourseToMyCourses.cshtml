@@ -5,24 +5,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3 class="text-center">Add selected course to your courses!</h3>
+<h3 class="text-center">Додај го курсот во Мои курсеви!</h3>
 
 <div class="row mt-4">
     <div class="col-md-4 m-auto">
         <form method="post" asp-action="AddCourseToMyCourses">
             <input type="hidden" asp-for="SelectedCourseId" />
             <div class="form-group">
-                <label asp-for="SelectedCourse.CourseName"></label>
+                <label asp-for="SelectedCourse.CourseName">Име</label>
                 <input disabled asp-for="SelectedCourse.CourseName" class="form-control" />
             </div>
 
-            @*            <div class="form-group">
-            <label asp-for="Quantity"></label>
-            <input type="number" asp-for="Quantity" class="form-control" />
-            </div>*@
+           
 
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="submit" value="Додај" class="btn btn-success" />
             </div>
         </form>
     </div>
