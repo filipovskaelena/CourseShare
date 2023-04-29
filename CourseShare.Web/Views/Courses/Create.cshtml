@@ -5,11 +5,99 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Креирај нов курс</h1>
 
-<h4>Course</h4>
+
 <hr />
-<div class="row">
+
+<div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                            <p class="text-center h4 fw-bold mb-5 mx-1 mx-md-4 mt-4">Внесете ги потребните податоци</p>
+
+                            @Html.ValidationSummary()
+                            <form asp-action="Create">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                
+                                <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseName" class="control-label">Име на курсот</label>
+                                        <input asp-for="CourseName" class="form-control" />
+                                        <span asp-validation-for="CourseName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseDescription" class="control-label">Опис</label>
+                                        <input asp-for="CourseDescription" class="form-control" />
+                                        <span asp-validation-for="CourseDescription" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseLink" class="control-label">Линк до курсот</label>
+                                        <input asp-for="CourseLink" class="form-control" />
+                                        <span asp-validation-for="CourseLink" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseLanguage" class="control-label">Јазик на курсот</label>
+                                        <input asp-for="CourseLanguage" class="form-control" />
+                                        <span asp-validation-for="CourseLanguage" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseRating" class="control-label">Рејтинг</label>
+                                        <input asp-for="CourseRating" class="form-control" />
+                                        <span asp-validation-for="CourseRating" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="AddedByUser" class="control-label">Додаден од</label>
+                                        <input asp-for="AddedByUser" class="form-control" />
+                                        <span asp-validation-for="AddedByUser" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center mb-4">
+
+                                    <div class="form-outline flex-fill mb-0">
+                                        <label asp-for="CourseQuiz" class="control-label">Квиз</label>
+                                        <input asp-for="CourseQuiz" class="form-control" />
+                                        <span asp-validation-for="CourseQuiz" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Креирај" class="btn btn-primary" />
+                                </div>
+
+                            </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+@*<div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -53,7 +141,7 @@
             </div>
         </form>
     </div>
-</div>
+</div>*@
 
 <div>
     <a asp-action="Index">Back to List</a>
